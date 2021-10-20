@@ -1,19 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-color: #6400ff;
-  height: 100vh;
-  width: 100vw;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.holder {
+  position: relative;
 }
 
 h1 {
-  position: relative;
-  margin: 0 auto;
-  top: 25vh;
-  width: 100vw;
   text-align: center;
   font-family: "Amatic SC";
-  font-size: 6vh;
+  font-size: 7vw;
   color: #000;
   opacity: 0.75;
 }
@@ -21,9 +35,10 @@ h1 {
 #cooking {
   position: relative;
   margin: 0 auto;
-  top: 0;
-  width: 75vh;
-  height: 75vh;
+  bottom: 0;
+  width: 70vw;
+  height: 0;
+  padding-bottom: 50%;
   overflow: hidden;
 }
 #cooking .bubble {
