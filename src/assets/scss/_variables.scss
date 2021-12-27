@@ -1,0 +1,58 @@
+
+$color: (
+    text: gray,
+    title: black,
+
+    primary: purple,
+    secondary: purple,
+    light: gray,
+);
+
+$device: (
+    xs: 480px,
+    sm: 600px,
+    md: 992px,
+    lg: 1200px,
+    l2: 1440px,
+    xl: 1600px,
+    xx: 1920px,
+    x2: 3000px,
+    x3: 4000px,
+);
+
+$shadow: (
+    xs: (0 0 4px rgba(25,25,25,0.1)),
+    sm: (0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)),
+    md: (0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)),
+    lg: (0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)),
+    xl: (0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)),
+    xx: (0 25px 50px -12px rgba(0, 0, 0, 0.25)),
+    in: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)
+);
+
+@mixin xs-max {@media (max-width: device(xs)) {@content;}}
+@mixin sm-max {@media (max-width: device(sm)) {@content;}}
+@mixin md-max {@media (max-width: device(md)) {@content;}}
+@mixin lg-max {@media (max-width: device(lg)) {@content;}}
+@mixin l2-max {@media (max-width: device(l2)) {@content;}}
+@mixin xl-max {@media (max-width: device(xl)) {@content;}}
+@mixin xx-max {@media (max-width: device(xx)) {@content;}}
+@mixin x2-max {@media (max-width: device(x2)) {@content;}}
+@mixin x3-max {@media (max-width: device(x3)) {@content;}}
+
+@mixin xs-more {@media (min-width: device(xs)) {@content;}}
+@mixin sm-more {@media (min-width: device(sm)) {@content;}}
+@mixin md-more {@media (min-width: device(md)) {@content;}}
+@mixin lg-more {@media (min-width: device(lg)) {@content;}}
+@mixin l2-more {@media (min-width: device(l2)) {@content;}}
+@mixin xl-more {@media (min-width: device(xl)) {@content;}}
+@mixin xx-more {@media (min-width: device(xx)) {@content;}}
+@mixin x2-more {@media (min-width: device(x2)) {@content;}}
+@mixin x3-more {@media (min-width: device(x3)) {@content;}}
+
+
+@function em($px){@return ($px / 16) + em;}
+@function rem($px){@return ($px / 16) + rem;}
+@function color($color-name){ @return map_get($color, $color-name); }
+@function device($device-name){ @return map_get($device, $device-name); }
+@function box($shadow-name){ @return map_get($shadow, $shadow-name); }

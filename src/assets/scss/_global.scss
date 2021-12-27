@@ -1,0 +1,115 @@
+/* /////////////// General /////////////// */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: em(16);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: auto;
+}
+
+header + main {
+    padding-top: 55px;
+}
+
+/*Basic setup*/
+
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* /////////////// Links /////////////// */
+
+a {
+    transition: 0.3s;
+    cursor: pointer !important;
+    text-decoration: none;
+}
+
+/* /////////////// Images /////////////// */
+// .bg-image {
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     &.bg-cover {
+//         background-size: cover;
+//     }
+//     &.bg-contain {
+//         background-size: contain;
+//     }
+//     &.bg-loading {
+//         background-color: color(light);
+//     }
+// }
+
+/* /////////////// Layout /////////////// */
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+
+/* /////////////// SVG Colors /////////////// */
+.fill-primary {
+    fill: color(primary);
+}
+.fill-secondary {
+    fill: color(secondary);
+}
+.fill-white {
+    fill: white;
+}
+
+/* /////////////// Custom Scrollbar style /////////////// */
+@include md-more {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+    }
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:active {
+        background: color(primary);
+        border: 0;
+        border-radius: 5px;
+    }
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-track:hover,
+    ::-webkit-scrollbar-track:active {
+        background: #fff;
+    }
+    ::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
+
+::selection { background: color(secondary); }
