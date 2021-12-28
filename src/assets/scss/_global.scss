@@ -24,14 +24,11 @@ body {
 #app {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 main {
     flex: auto;
-}
-
-header + main {
-    padding-top: 55px;
 }
 
 /*Basic setup*/
@@ -52,39 +49,11 @@ a {
     text-decoration: none;
 }
 
-/* /////////////// Images /////////////// */
-// .bg-image {
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     &.bg-cover {
-//         background-size: cover;
-//     }
-//     &.bg-contain {
-//         background-size: contain;
-//     }
-//     &.bg-loading {
-//         background-color: color(light);
-//     }
-// }
+/* /////////////// Framework /////////////// */
 
-/* /////////////// Layout /////////////// */
-.flex-1 {
-    flex: 1;
-}
-.flex-2 {
-    flex: 2;
-}
+@import './framework/grid.scss';
+@import './framework/text.scss';
 
-/* /////////////// SVG Colors /////////////// */
-.fill-primary {
-    fill: color(primary);
-}
-.fill-secondary {
-    fill: color(secondary);
-}
-.fill-white {
-    fill: white;
-}
 
 /* /////////////// Custom Scrollbar style /////////////// */
 @include md-more {

@@ -1,24 +1,22 @@
 <template>
   <div>
-    <header>
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-      </nav>
-    </header>
-    
-    <main>
-      <slot/>
-    </main>
-
-    <footer>
-      Copyright
-    </footer>
+    <Header />
+    <main><slot/></main>
+    <Footer />
   </div>
 </template>
+
+<script>
+import Footer from '~/layouts/footer'
+import Header from '~/layouts/header'
+
+export default {
+  components: {
+    Footer,
+    Header
+  }
+}
+</script>
 
 <static-query>
 query {

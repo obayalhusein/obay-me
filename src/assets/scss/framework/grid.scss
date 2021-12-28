@@ -1,0 +1,36 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Row Y
+.y-start {
+    align-items: flex-start;
+}
+.y-center {
+    align-items: center;
+}
+.y-end {
+    align-items: flex-end;
+}
+
+// Row X
+.x-start {
+    justify-content: flex-start;
+}
+.x-center {
+    justify-content: center;
+}
+.x-end {
+    justify-content: flex-end;
+}
+
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.flex-3 {
+    flex: 3;
+}

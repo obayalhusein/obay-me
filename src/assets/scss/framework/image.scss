@@ -1,0 +1,13 @@
+.bg-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    &.bg-cover {
+        background-size: cover;
+    }
+    &.bg-contain {
+        background-size: contain;
+    }
+    &.bg-loading {
+        background-color: color(light);
+    }
+}
