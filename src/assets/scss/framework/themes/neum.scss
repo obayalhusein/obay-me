@@ -1,5 +1,18 @@
 .neum {
+    background-color: #e0e0e0;
     .btn {
-        background: green;
+        background: #e0e0e0;
+        color: #161616;
+        border-radius: 40px;
+        box-shadow:  5px 5px 10px #bebebe,
+                     -5px -5px 10px #ffffff,
+                     inset 0 0 0 #bebebe,
+                     inset 0 0 0 #ffffff;
+        &:hover {
+            box-shadow: 0 0 0 #bebebe,
+                        0 0 0 #ffffff,
+                        inset 5px 5px 10px #bebebe,
+                        inset -5px -5px 10px #ffffff;
+        }
     }
 }
