@@ -52,7 +52,7 @@ $shadow: (
 
 
 @function em($px){@return calc($px / 16) + unquote('em');}
-@function rem($px){@return calc($px / 16) + unquote('em');}
+@function rem($px){@return calc($px / 16) + unquote('rem');}
 @function color($color-name){ @return map_get($color, $color-name); }
 @function device($device-name){ @return map_get($device, $device-name); }
 @function box($shadow-name){ @return map_get($shadow, $shadow-name); }

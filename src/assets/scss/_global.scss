@@ -41,6 +41,19 @@ svg {
     max-height: 100%;
 }
 
+/* /////////////// Framework /////////////// */
+
+@import './framework/grid.scss';
+@import './framework/text.scss';
+@import './framework/spacer.scss';
+
+// Componenets
+@import './framework/components.scss';
+
+// Themes
+@import './framework/themes/flat.scss';
+@import './framework/themes/neum.scss';
+
 /* /////////////// Links /////////////// */
 
 a {
@@ -48,12 +61,6 @@ a {
     cursor: pointer !important;
     text-decoration: none;
 }
-
-/* /////////////// Framework /////////////// */
-
-@import './framework/grid.scss';
-@import './framework/text.scss';
-
 
 /* /////////////// Custom Scrollbar style /////////////// */
 @include md-more {

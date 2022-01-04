@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="py-4 t-center">
         FOOOOOTER
     </footer>
 </template>
