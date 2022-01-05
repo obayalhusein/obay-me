@@ -1,1 +1,17 @@
-@import './components/button.scss';
+.btn {
+    padding: space(3) space(4);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0;
+    transition: .3s;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    padding: space(3) space(4);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0;
+    transition: .3s;
+}

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Intro from '~/components/home/intro'
+import Intro from '~/sections/intro'
 
 export default {
   metaInfo: {
