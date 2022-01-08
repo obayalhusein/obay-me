@@ -1,8 +1,8 @@
 <template>
   <div>
     <main>
-      <button @click="setTheme('neum')">Set neum</button>
-      <button @click="setTheme('flat')">Set flat</button>
+      <button @click="setTheme(1)">Set neum</button>
+      <button @click="setTheme(0)">Set flat</button>
       <Header />
       <slot/>
     </main>
@@ -22,7 +22,7 @@ export default {
   data () {
     return {
       themes: ['flat', 'neum'],
-      currentTheme: 'flat',
+      currentTheme: 0,
       darkmode: false,
     }
   },
@@ -31,13 +31,12 @@ export default {
     this.setTheme(this.currentTheme);
   },
   methods: {
-    setTheme(newTheme) {
+    setTheme(i) {
       // Remove all themes
       this.themes.forEach(theme => { document.body.classList.remove(theme); });
       // Set new Theme
-      this.currentTheme = newTheme;
+      this.currentTheme = this.themes[i];
       document.body.classList.toggle(this.currentTheme);
-
     }
   },
 }
