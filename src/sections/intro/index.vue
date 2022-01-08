@@ -1,20 +1,22 @@
 <template>
     <div>
-        <div>DIV 1</div>
-        <Button></Button>
-        <div>DIV 2</div>
-        <button class="btn">button</button>
-        <input type="text" placeholder="Your name">
+        <Button text="Save" />
+        <Input />
+        <Img link="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg" />
     </div>
 </template>
 
 <script>
-import Button from '../../components/Button.vue'
+import Button from '~/components/Button.vue'
+import Input from '~/components/Input.vue'
+import Img from '~/components/Img.vue'
 
 export default {
     name: 'Intro',
     components: {
-        Button
-    }
+        Button,
+        Input,
+        Img,
+    },
 }
 </script>

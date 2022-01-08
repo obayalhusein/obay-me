@@ -17,14 +17,13 @@
     }
     input,
     textarea {
-        background: #e0e0e0;
+        background: #dbdbdb;
         color: #161616;
         border-radius: 40px;
         box-shadow: 0 0 0 #bebebe,
                     0 0 0 #ffffff,
                     inset 1px 2px 4px #bebebe,
                     inset -1px -2px 4px #ffffff;
-        outline: 0;
         &::placeholder {
             color: rgba(0,0,0,.2);
         }
