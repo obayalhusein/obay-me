@@ -1,35 +1,17 @@
-$device: (
-    xs: 480px,
-    sm: 600px,
-    md: 992px,
-    lg: 1200px,
-    l2: 1440px,
-    xl: 1600px,
-    xx: 1920px,
-    x2: 3000px,
-    x3: 4000px,
+$devices: (
+    xs: 0px,
+    sm: 480px,
+    md: 600px,
+    lg: 992px,
+    xl: 1200px,
+    x2: 1440px,
+    x3: 1900px,
 );
 
-@mixin xs-max {@media (max-width: device(xs)) {@content;}}
-@mixin sm-max {@media (max-width: device(sm)) {@content;}}
-@mixin md-max {@media (max-width: device(md)) {@content;}}
-@mixin lg-max {@media (max-width: device(lg)) {@content;}}
-@mixin l2-max {@media (max-width: device(l2)) {@content;}}
-@mixin xl-max {@media (max-width: device(xl)) {@content;}}
-@mixin xx-max {@media (max-width: device(xx)) {@content;}}
-@mixin x2-max {@media (max-width: device(x2)) {@content;}}
-@mixin x3-max {@media (max-width: device(x3)) {@content;}}
+@function device($device-name){ @return map_get($devices, $device-name); }
 
-@mixin xs-more {@media (min-width: device(xs)) {@content;}}
-@mixin sm-more {@media (min-width: device(sm)) {@content;}}
-@mixin md-more {@media (min-width: device(md)) {@content;}}
-@mixin lg-more {@media (min-width: device(lg)) {@content;}}
-@mixin l2-more {@media (min-width: device(l2)) {@content;}}
-@mixin xl-more {@media (min-width: device(xl)) {@content;}}
-@mixin xx-more {@media (min-width: device(xx)) {@content;}}
-@mixin x2-more {@media (min-width: device(x2)) {@content;}}
-@mixin x3-more {@media (min-width: device(x3)) {@content;}}
+@mixin max-width($device-name) {@media (max-width: device($device-name)) {@content;}}
+@mixin min-width($device-name) {@media (min-width: device($device-name)) {@content;}}
 
 @function em($px){@return calc($px / 16) + unquote('em');}
 @function rem($px){@return calc($px / 16) + unquote('rem');}
-@function device($device-name){ @return map_get($device, $device-name); }
