@@ -17,47 +17,61 @@ $points: (
 .r {
     display: flex;
     flex-wrap: wrap;
-    &.rsmd {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    &.sm {
         max-width: 700px;
-        margin: 0 auto;
+    }
+    &.md {
+        max-width: 1000px;
+    }
+    &.lg {
+        max-width: 1200px;
+    }
+    &.full {
+        width: 100%;
+    }
+    &.rr {
+        flex-direction: row-reverse;
     }
 }
-@each $device-name, $device-value in $devices {
-    @each $point-name, $point-value in $points {
-        .c#{$device-name}#{$point-name} {
-            @include min-width($device-name) { width: $point-value;}
+
+.c {
+    flex: 1;
+    @include max-width('md') {
+        flex: 0 0 100%;
+    }
+    @each $device-name, $device-value in $devices {
+        @each $point-name, $point-value in $points {
+            &.#{$device-name}#{$point-name} {
+                @include min-width($device-name) {
+                    flex: 0 0 $point-value;
+                    max-width: $point-value;
+                }
+            }
         }
     }
 }
 
 // Row Y
-.y-start {
+.ys {
     align-items: flex-start;
 }
-.y-center {
+.yc {
     align-items: center;
 }
-.y-end {
+.ye {
     align-items: flex-end;
 }
 
 // Row X
-.x-start {
+.xs {
     justify-content: flex-start;
 }
-.x-center {
+.xc {
     justify-content: center;
 }
-.x-end {
+.xe {
     justify-content: flex-end;
-}
-
-.flex-1 {
-    flex: 1;
-}
-.flex-2 {
-    flex: 2;
-}
-.flex-3 {
-    flex: 3;
 }
