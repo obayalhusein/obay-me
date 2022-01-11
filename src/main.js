@@ -4,7 +4,20 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/scss/app.scss'
 
+import Button from '~/components/Button.vue'
+import Input from '~/components/Input.vue'
+import Img from '~/components/Img.vue'
+import Row from '~/components/Row.vue'
+import Col from '~/components/Col.vue'
+
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  
+  // Components globally
+  Vue.component('Button', Button)
+  Vue.component('Input', Input)
+  Vue.component('Img', Img)
+  Vue.component('Row', Row)
+  Vue.component('Col', Col)
 }
