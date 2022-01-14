@@ -1,23 +1,23 @@
 <template>
   <div>
-    <main>
-      <button @click="setTheme(1)">Set neum</button>
-      <button @click="setTheme(0)">Set flat</button>
-      <Header />
+    <main>      <Header />
       <slot/>
     </main>
     <Footer />
+    <Debugger />
   </div>
 </template>
 
 <script>
 import Footer from '~/layouts/footer'
 import Header from '~/layouts/header'
+import Debugger from '~/components/Debugger'
 
 export default {
   components: {
     Footer,
-    Header
+    Header,
+    Debugger,
   },
   data () {
     return {
