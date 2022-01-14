@@ -18,6 +18,14 @@ $shadow: (
 @function box($shadow-name){ @return map_get($shadow, $shadow-name); }
 
 .flat {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: color(primary);
+    }
     .btn {
         background: color(primary);
         color: white;
