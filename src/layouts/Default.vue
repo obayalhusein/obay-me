@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Footer from '~/layouts/footer'
-import Header from '~/layouts/header'
+import Footer from '~/layouts/Footer'
+import Header from '~/layouts/Header'
 import Debugger from '~/components/Debugger'
 
 export default {
