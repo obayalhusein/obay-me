@@ -1,17 +1,26 @@
 <template>
     <header>
-      <strong>
-        <g-link to="/">Obay</g-link>
-      </strong>
       <nav>
-        <g-link to="/">Home</g-link>
-        <g-link to="/about">About</g-link>
+        <Row size="full">
+          <Col>
+            burger
+            <g-link to="/">Home</g-link>
+            <g-link to="/about">About</g-link>
+          </Col>
+          <Col>
+            <g-link to="/">
+              Obay
+            </g-link>
+          </Col>
+          <Col></Col>
+        </Row>
       </nav>
     </header>
 </template>
 
 <script>
+
 export default {
-    name: 'Header'
+    name: 'Header',
 }
 </script>
