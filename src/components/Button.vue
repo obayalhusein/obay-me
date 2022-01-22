@@ -1,7 +1,5 @@
 <template>
-    <component :is="link ? 'a' : 'button'" class="btn" :href="link" :class="setSpacer(innerSpace)">
-        {{ text }}
-    </component>
+    <component :is="link ? 'a' : 'button'" class="btn" :href="link" :class="setSpacerClass">{{ text }}</component>
 </template>
 
 <script>
@@ -12,7 +10,6 @@ export default {
     props: {
         text: String,
         link: String,
-        innerSpace: String
     },
     mixins: [Spacer],
 }
