@@ -1,3 +1,16 @@
 @import './variables';
+
+// General
 @import './global';
 @import './layout';
+
+// Framework
+@import './framework/grid.scss';
+@import './framework/button.scss';
+@import './framework/input.scss';
+@import './framework/text.scss';
+@import './framework/spacer.scss';
+
+// Themes
+@import './framework/themes/flat.scss';
+@import './framework/themes/neum.scss';

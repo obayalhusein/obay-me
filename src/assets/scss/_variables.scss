@@ -8,6 +8,23 @@ $devices: (
     x3: 1900px,
 );
 
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+$gaps: (
+  margin: 'm',
+  padding: 'p',
+);
+
+@function space($spacer-name){ @return map_get($spacers, $spacer-name); }
+
 @function device($device-name){ @return map_get($devices, $device-name); }
 
 @mixin max-width($device-name) {@media (max-width: device($device-name)) {@content;}}

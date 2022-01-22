@@ -1,43 +1,26 @@
-$spacer: 1rem;
-$spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-);
-
-$types: (
-  margin: 'm',
-  padding: 'p',
-);
-
-@function space($spacer-name){ @return map_get($spacers, $spacer-name); }
-
-@each $type, $type-value in $types {
+@each $gap, $gap-value in $gaps {
   @each $space, $space-value in $spacers {
-      .#{$type-value}#{$space} {
+      .#{$gap-value}#{$space} {
         padding: $space-value;
       }
-      .#{$type-value}y#{$space} {
+      .#{$gap-value}y#{$space} {
         padding-top: $space-value;
         padding-bottom: $space-value;
       }
-      .#{$type-value}x#{$space} {
+      .#{$gap-value}x#{$space} {
         padding-left: $space-value;
         padding-right: $space-value;
       }
-      .#{$type-value}t#{$space} {
+      .#{$gap-value}t#{$space} {
         padding-top: $space-value;
       }
-      .#{$type-value}b#{$space} {
+      .#{$gap-value}b#{$space} {
         padding-bottom: $space-value;
       }
-      .#{$type-value}s#{$space} {
+      .#{$gap-value}s#{$space} {
         padding-left: $space-value;
       }
-      .#{$type-value}e#{$space} {
+      .#{$gap-value}e#{$space} {
         padding-right: $space-value;
       }
   }
