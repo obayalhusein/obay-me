@@ -6,6 +6,7 @@
             burger
             <g-link to="/">Home</g-link>
             <g-link to="/about">About</g-link>
+            <g-link to="/projects">Projects</g-link>
           </Col>
           <Col>
             <g-link to="/">
