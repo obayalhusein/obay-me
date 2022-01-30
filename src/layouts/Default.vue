@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import Theme from '~/mixin/theme'
 import Footer from '~/layouts/Footer'
 import Header from '~/layouts/Header'
 import Debugger from '~/components/Debugger'
@@ -20,25 +21,10 @@ export default {
     Header,
     Debugger,
   },
-  data () {
-    return {
-      themes: ['flat', 'neum'],
-      currentTheme: 0,
-      darkmode: false,
-    }
-  },
+  mixins: [Theme],
   mounted() {
     // Set default theme
     this.setTheme(this.currentTheme);
-  },
-  methods: {
-    setTheme(i) {
-      // Remove all themes
-      this.themes.forEach(theme => { document.body.classList.remove(theme); });
-      // Set new Theme
-      this.currentTheme = this.themes[i];
-      document.body.classList.toggle(this.currentTheme);
-    }
   },
 }
 </script>

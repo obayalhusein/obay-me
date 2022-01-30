@@ -1,12 +1,19 @@
 <template>
     <div class="holder">
-        <div><button @click="$parent.setTheme(1)">Neumoriphism</button></div>
-        <div><button @click="$parent.setTheme(0)">Flat</button></div>
+        <p>Theme:</p>
+        <div><button @click="setTheme(1)">Neumoriphism</button></div>
+        <div><button @click="setTheme(0)">Flat</button></div>
+        <br>
+        <p>Mode:</p>
+        <div><button @click="toggleDarkMode()">Toggle Dark</button></div>
     </div>
 </template>
 <script>
+import Theme from '~/mixin/theme'
+
 export default {
     name: "Debugger",
+    mixins: [Theme],
 }
 </script>
 <style>
