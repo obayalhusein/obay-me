@@ -1,19 +1,11 @@
 .neum {
     background-color: #e0e0e0;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    @include titles {
         color: #3b3b3b;
         // text-shadow:  1px 1px 2px #ffffff,
         //              -1px -1px 2px #bebebe;
     }
-    p {
-        color: #aaaaaa;
-    }
-    .btn {
+    @include buttons {
         background: #e0e0e0;
         color: #161616;
         border-radius: 40px;
@@ -28,8 +20,7 @@
                         inset -4px -4px 8px #ffffff;
         }
     }
-    input,
-    textarea {
+    @include inputs {
         background: #dbdbdb;
         color: #161616;
         border-radius: 40px;

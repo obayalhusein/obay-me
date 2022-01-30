@@ -1,7 +1,17 @@
 $color: (
-    text: gray,
-    title: black,
-    primary: rgb(100,0,255),
+    light-base: white,
+    light-primary: #6400ff,
+    light-title: black,
+    light-text: gray,
+    light-text-muted: rgba(gray, .25),
+    light-input: white,
+    
+    dark-base: #121212,
+    dark-primary: #6400ff,
+    dark-title: white,
+    dark-text: gray,
+    dark-text-muted: rgba(gray, .25),
+    dark-input: rgba(255, 255, 255, 0.025),
 );
 
 $shadow: (
@@ -17,18 +27,9 @@ $shadow: (
 @function color($color-name){ @return map_get($color, $color-name); }
 @function box($shadow-name){ @return map_get($shadow, $shadow-name); }
 
+// Default style
 .flat {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: color(primary);
-    }
-    .btn {
-        background: color(primary);
-        color: white;
+    @include buttons {
         border-radius: 10px;
         box-shadow: box(sm);
         &:hover {
@@ -36,13 +37,30 @@ $shadow: (
             transform: scale(1.025);
         }
     }
-    input,
-    textarea {
-        color: color(primary);
+    @include inputs {
         border-radius: 10px;
         box-shadow: box(sm);
-        &::placeholder {
-            color: rgba(0,0,0,.2);
+    }
+}
+
+// Dark & Light
+@each $mode, $mode-value in $modes {
+    .flat#{$mode-value} {
+        background-color: color(#{$mode}-base);
+        color: color(#{$mode}-text);
+        @include titles {
+            color: color(#{$mode}-primary);
+        }
+        @include buttons {
+            background: color(#{$mode}-primary);
+            color: white;
+        }
+        @include inputs {
+            background-color: color(#{$mode}-input);
+            color: color(#{$mode}-text);
+            &::placeholder {
+                color: color(#{$mode}-text-muted);
+            }
         }
     }
 }

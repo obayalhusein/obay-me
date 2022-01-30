@@ -14,7 +14,7 @@ export default {
             document.body.classList.toggle(this.currentTheme);
         },
         toggleDarkMode() {
-            document.body.classList.toggle("dark");
+            document.body.classList.toggle("d");
         },
     },
 }

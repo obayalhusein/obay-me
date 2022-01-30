@@ -1,4 +1,4 @@
-.btn {
+@include buttons {
     display: inline-flex;
     padding: space(3) space(4);
     text-transform: uppercase;

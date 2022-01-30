@@ -1,5 +1,4 @@
-input,
-textarea {
+@include inputs {
     padding: space(3) space(4);
     text-transform: uppercase;
     font-weight: bold;

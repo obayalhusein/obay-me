@@ -1,3 +1,8 @@
+$modes: (
+    light: '',
+    dark: '.d'
+);
+
 $devices: (
     xs: 0px,
     sm: 480px,
@@ -24,7 +29,6 @@ $gaps: (
 );
 
 @function space($spacer-name){ @return map_get($spacers, $spacer-name); }
-
 @function device($device-name){ @return map_get($devices, $device-name); }
 
 @mixin max-width($device-name) {@media (max-width: device($device-name)) {@content;}}
@@ -32,3 +36,7 @@ $gaps: (
 
 @function em($px){@return calc($px / 16) + unquote('em');}
 @function rem($px){@return calc($px / 16) + unquote('rem');}
+
+@mixin titles { h1,h2,h3,h4,h5,h6 {@content;}}
+@mixin buttons { .btn {@content;}}
+@mixin inputs { input, textarea {@content;}}
