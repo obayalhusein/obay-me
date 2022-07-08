@@ -1,14 +1,37 @@
-# Default starter for Gridsome
+## Grid
+### `<Row />`
+|Name         |Type              |Default         |Description                   |
+|-------------|------------------|----------------|------------------------------|
+|fluid        |`Boolean`         |null            |                              |
+|x            |`String`          |null            |                              |
+|y            |`String`          |null            |                              |
 
-This is the project you get when you run `gridsome create new-project`.
+### `<Col />`
+|Name         |Type              |Default         |Description                   |
+|-------------|------------------|----------------|------------------------------|
+|fluid        |`Boolean`         |null            |                              |
+|x            |`String`          |null            |                              |
+|y            |`String`          |null            |                              |
 
-### 1. Install Gridsome CLI tool if you don't have
+## Buttons & Links
+### `<Button />`
+|Name         |Type              |Default         |Description                   |
+|-------------|------------------|----------------|------------------------------|
+|text         |`String`          |null            |Text inside the button        |
+|link         |`String`          |null            |Converts the tag to `<a>`     |
 
-`npm install --global @gridsome/cli`
+## Input & Textarea
+### `<Input />`
+|Name         |Type              |Default         |Description                      |
+|-------------|------------------|----------------|---------------------------------|
+|value         |`String`         |null            |Text inside the field            |
+|tall          |`Boolean`        |null            |Converts the tag to `<textarea>` |
 
-### 2. Create a Gridsome project
+## Image
+### `<img />`
+|Name         |Type              |Default         |Description                          |
+|-------------|------------------|----------------|-------------------------------------|
+|link         |`String`          |null            |Image URL            |               |
+|text         |`String`          |null            |Text inside alt attribute            |
+|ratio        |`String`          |100%            | Ratio of the image (by default 1x1) |
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌

@@ -1,6 +1,6 @@
 <template>
     <component :is="tall ? 'textarea' : 'input'" :value="text">
-        {{ (tall) ? text : '' }}
+        {{ tall ? text : '' }}
     </component>
 </template>
 
@@ -9,7 +9,7 @@ export default {
     name: 'Input',
     props: {
         text: String,
-        tall: String
+        tall: Boolean
     }
 }
 </script>
