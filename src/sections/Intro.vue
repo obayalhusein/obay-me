@@ -1,5 +1,7 @@
 <template>
     <section>
+        <Scene>
+        </Scene>
         <Row>
             <Col>
                 <h1>Hi, I'm Obay Alhusein</h1>
@@ -17,8 +19,10 @@
 </template>
 
 <script>
+import Scene from '@/components/three/Scene'
 
 export default {
     name: 'Intro',
+    components: { Scene },
 }
 </script>
