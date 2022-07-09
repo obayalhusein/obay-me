@@ -7,38 +7,75 @@ import * as THREE from 'three'
 
 export default {
     name: 'Scene',
-    mounted () {
-        // Canvas
-        const canvas = this.$refs[`canvas${this._uid}`]
-
-        // Scene
-        const scene = new THREE.Scene()
-
-        // ratio
-        const ratio = {
-            width: 800,
-            height: 600
+    data () {
+        return {
+            cursor: { x: 0, y: 0 },
+            ratio: { width: window.innerWidth, height: window.innerHeight },
+            scene: new THREE.Scene(),
+            camera: {},
+            renderer: {},
         }
-
+    },
+    mounted () {
         // Object
-        const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)
-        const cubeMaterial = new THREE.MeshBasicMaterial({
-            color: '#ff0000'
-        })
-        const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
-        scene.add(cubeMesh)
+        this.createCube()
+        this.createCube()
 
         // Camera
-        const camera = new THREE.PerspectiveCamera(75, ratio.width / ratio.height)
-        camera.position.z = 3
-        scene.add(camera)
+        this.createCamera()
 
         // Renderer
-        const renderer = new THREE.WebGLRenderer({
-            canvas: canvas
-        })
-        renderer.setSize(ratio.width, ratio.height)
-        renderer.render(scene, camera)
-    }
+        this.resizePage()
+        this.render()
+    },
+    methods: {
+        createCube() {
+            const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)
+            const cubeMaterial = new THREE.MeshBasicMaterial({
+                color: '#ff0000'
+            })
+            const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
+            this.scene.add(cubeMesh)
+        },
+        createCamera() {
+            this.camera = new THREE.PerspectiveCamera(75 , this.ratio.width / this.ratio.height, 0.1 , 100)
+            this.camera.position.z = 3
+            this.scene.add(this.camera)
+        },
+        render() {
+            // Canvas
+            const canvas = this.$refs[`canvas${this._uid}`]
+
+            // Renderer
+            this.renderer = new THREE.WebGLRenderer({canvas})
+            this.renderer.setSize(this.ratio.width, this.ratio.height)
+            this.renderer.render(this.scene, this.camera)
+
+            // Animation
+            this.tick()
+        },
+        tick() {
+            // Render
+            this.renderer.render(this.scene, this.camera)
+
+            // Recursion on next frame
+            window.requestAnimationFrame(this.tick)
+        },
+        resizePage() {
+            window.addEventListener('resize', () => {
+                // Update sizes
+                this.ratio.width = window.innerWidth
+                this.ratio.height = window.innerHeight
+                        
+                // Update camera
+                this.camera.aspect = this.ratio.width / this.ratio.height
+                this.camera.updateProjectionMatrix()
+                
+                // Update renderer
+                this.renderer.setSize(this.ratio.width, this.ratio.height)
+                this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+            });
+        }
+    },
 }
 </script>
