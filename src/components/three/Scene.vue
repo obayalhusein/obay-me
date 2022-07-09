@@ -14,12 +14,26 @@ export default {
             scene: new THREE.Scene(),
             camera: {},
             renderer: {},
+            clock: new THREE.Clock(),
         }
     },
     mounted () {
         // Object
-        this.createCube()
-        this.createCube()
+        this.createCube({
+            position: {
+                x: -2,
+            }
+        })
+        this.createCube({
+            position: {
+                x: 0,
+            }
+        })
+        this.createCube({
+            position: {
+                x: 2,
+            }
+        })
 
         // Camera
         this.createCamera()
@@ -27,14 +41,21 @@ export default {
         // Renderer
         this.resizePage()
         this.render()
+    
+        // Animation
+        this.tick()
     },
     methods: {
-        createCube() {
+        createCube(data) {
             const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)
-            const cubeMaterial = new THREE.MeshBasicMaterial({
-                color: '#ff0000'
-            })
+            const cubeMaterial = new THREE.MeshBasicMaterial({color: '#ff0000'})
             const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
+
+            // Set data
+            data.position.x != undefined ? cubeMesh.position.x = data.position.x : null
+            data.position.y != undefined ? cubeMesh.position.y = data.position.y : null
+            data.position.z != undefined ? cubeMesh.position.z = data.position.z : null
+
             this.scene.add(cubeMesh)
         },
         createCamera() {
@@ -50,11 +71,17 @@ export default {
             this.renderer = new THREE.WebGLRenderer({canvas})
             this.renderer.setSize(this.ratio.width, this.ratio.height)
             this.renderer.render(this.scene, this.camera)
-
-            // Animation
-            this.tick()
         },
         tick() {
+            // Get time
+            const elapsedTime = this.clock.getElapsedTime()
+
+            // Loop rotation animation
+            const meshs = this.scene.children.filter(item => item.isMesh)
+            meshs.forEach(mesh => {
+                mesh.rotation.set(0.1 * elapsedTime, 0.1 * elapsedTime, 0.1 * elapsedTime)
+            });
+
             // Render
             this.renderer.render(this.scene, this.camera)
 
