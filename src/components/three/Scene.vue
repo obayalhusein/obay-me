@@ -70,6 +70,7 @@ export default {
             // Renderer
             this.renderer = new THREE.WebGLRenderer({canvas})
             this.renderer.setSize(this.ratio.width, this.ratio.height)
+            this.renderer.setClearColor( 0xffffff, 0);
             this.renderer.render(this.scene, this.camera)
         },
         tick() {
