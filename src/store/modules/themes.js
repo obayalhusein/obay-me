@@ -5,14 +5,14 @@ const state = {
             id: 1,
             name: 'flat',
             colors: {
-                primary: 'purple', 
+                primary: '#6400ff', 
             },
         },
         {
             id: 2,
             name: 'neum',
             colors: {
-                primary: 'green', 
+                primary: 'white', 
             },
         },
     ],

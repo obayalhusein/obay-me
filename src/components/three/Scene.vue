@@ -4,9 +4,11 @@
 
 <script>
 import * as THREE from 'three'
+import Theme from '~/mixin/theme'
 
 export default {
     name: 'Scene',
+    mixins: [Theme],
     data () {
         return {
             cursor: { x: 0, y: 0 },
@@ -50,6 +52,21 @@ export default {
     
         // Animation
         this.tick()
+    },
+    computed: {
+        theme() {
+            return this.currentTheme;
+        }
+    },
+    watch: {
+        theme(newVal, oldVal) {
+            // Loop rotation animation
+            const meshs = this.scene.children.filter(item => item.isMesh)
+            meshs.forEach(mesh => {
+                mesh.material.wireframe = this.theme.id == 1
+                mesh.material.color.set( this.theme.colors.primary );
+            });
+        }
     },
     methods: {
         createCube(data) {
