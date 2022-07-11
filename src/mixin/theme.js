@@ -1,17 +1,19 @@
+import { mapGetters } from 'vuex'
+
 export default {
-    data () {
-        return {
-          themes: ['flat', 'neum'],
-          currentTheme: 0,
-        }
+    computed: {
+        ...mapGetters('themes', {
+            currentTheme: 'currentTheme', 
+            allThemes: 'allThemes'
+        })
     },
     methods: {
         setTheme(i) {
             // Remove all themes
-            this.themes.forEach(theme => { document.body.classList.remove(theme); });
-            // Set new Theme
-            this.currentTheme = this.themes[i];
-            document.body.classList.toggle(this.currentTheme);
+            this.allThemes.forEach(theme => { document.body.classList.remove(theme); });
+            // // Set new Theme
+            this.$store.commit('themes/changeCurrentTheme', i)
+            document.body.classList.toggle(this.allThemes[this.currentTheme]);
         },
         toggleDarkMode() {
             document.body.classList.toggle("d");
