@@ -10,7 +10,7 @@ export default {
     data () {
         return {
             cursor: { x: 0, y: 0 },
-            ratio: { width: window.innerWidth, height: window.innerHeight },
+            ratio: { width: 0, height: 0 },
             scene: new THREE.Scene(),
             camera: {},
             renderer: {},
@@ -18,6 +18,12 @@ export default {
         }
     },
     mounted () {
+        // Set viewport ratio
+        this.ratio = {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+
         // Object
         this.createCube({
             position: {
