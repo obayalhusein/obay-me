@@ -8,12 +8,14 @@ export default {
         })
     },
     methods: {
-        setTheme(i) {
-            // Remove all themes
-            this.allThemes.forEach(theme => { document.body.classList.remove(theme); });
-            // // Set new Theme
-            this.$store.commit('themes/changeCurrentTheme', i)
-            document.body.classList.toggle(this.allThemes[this.currentTheme]);
+        setTheme(id) {
+            // Remove old theme class
+            if(this.currentTheme){
+                document.body.classList.remove(this.currentTheme.name);
+            }
+            // Set new Theme
+            this.$store.commit('themes/changeCurrentTheme', this.allThemes.find(theme => theme.id == id))
+            document.body.classList.add(this.currentTheme.name);
         },
         toggleDarkMode() {
             document.body.classList.toggle("d");

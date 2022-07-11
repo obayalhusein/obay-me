@@ -1,8 +1,8 @@
 <template>
     <div class="holder">
         <p>Theme:</p>
-        <div><button @click="setTheme(1)">Neumoriphism</button></div>
-        <div><button @click="setTheme(0)">Flat</button></div>
+        <div><button @click="setTheme(1)">Flat</button></div>
+        <div><button @click="setTheme(2)">Neumoriphism</button></div>
         <br>
         <p>Mode:</p>
         <div><button @click="toggleDarkMode()">Toggle Dark</button></div>

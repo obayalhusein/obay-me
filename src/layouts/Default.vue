@@ -24,7 +24,7 @@ export default {
   mixins: [Theme],
   mounted() {
     // Set default theme
-    this.setTheme(this.currentTheme);
+    this.setTheme(this.currentTheme ? this.currentTheme.id : 1);
   },
 }
 </script>

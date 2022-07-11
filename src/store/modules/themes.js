@@ -1,6 +1,21 @@
 const state = {
-    currentTheme: 0,
-    allThemes: ['flat', 'neum'],
+    currentTheme: null,
+    allThemes: [
+        {
+            id: 1,
+            name: 'flat',
+            colors: {
+                primary: 'purple', 
+            },
+        },
+        {
+            id: 2,
+            name: 'neum',
+            colors: {
+                primary: 'green', 
+            },
+        },
+    ],
 }
 
 const getters = {
