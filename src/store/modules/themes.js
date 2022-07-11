@@ -13,7 +13,7 @@ const actions = {}
 const mutations = {
     changeCurrentTheme: (state, payload) => {
         state.currentTheme = payload
-    } 
+    }
 }
 
 export default {
