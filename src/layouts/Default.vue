@@ -1,13 +1,14 @@
 <template>
   <div>
     <Row size="full" no-wrap>
-      <Col class="pos-sticky top-0 vh-100" style="width: 50px;">
-        <Header />
+      <Col class="pos-sticky top-0 vh-100">
+        <Rail />
       </Col>
       <Col>
         <div>
           <slot/>
           <Footer />
+          <Debugger />
         </div>
       </Col>
     </Row>
@@ -17,13 +18,13 @@
 <script>
 import Theme from '~/mixin/theme'
 import Footer from '~/layouts/Footer'
-import Header from '~/layouts/Header'
+import Rail from '~/layouts/Rail'
 import Debugger from '~/components/Debugger'
 
 export default {
   components: {
     Footer,
-    Header,
+    Rail,
     Debugger,
   },
   mixins: [Theme],

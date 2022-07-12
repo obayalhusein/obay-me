@@ -1,0 +1,13 @@
+.flat {
+    #rail {
+        background-color: color(light-primary);
+        svg {
+            path {
+                stroke: white;
+            }
+        }
+        .nav-link {
+            color: white;
+        }
+    }
+}

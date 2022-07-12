@@ -1,9 +1,5 @@
 @import './variables';
 
-// General
-@import './global';
-@import './layout';
-
 // Framework
 @import './framework/grid.scss';
 @import './framework/button.scss';
@@ -12,7 +8,12 @@
 @import './framework/spacer.scss';
 @import './framework/positions.scss';
 @import './framework/ratios.scss';
+@import './framework/animation.scss';
 
 // Themes
 @import './framework/themes/flat.scss';
 @import './framework/themes/neum.scss';
+
+// General
+@import './global';
+@import './layout';

@@ -1,0 +1,21 @@
+.smooth {
+    transition: .3s;
+}
+
+.motion-dashOffset {
+    animation: dashOffset forwards;
+}
+
+.time-1 {
+    animation-duration: 1s;
+}
+
+.delay-1 {
+    animation-delay: 1s;
+}
+
+@keyframes dashOffset {
+    to {
+        stroke-dashoffset:0
+    }
+}
