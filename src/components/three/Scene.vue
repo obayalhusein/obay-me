@@ -27,21 +27,9 @@ export default {
         }
 
         // Object
-        this.createCube({
-            position: {
-                x: -2,
-            }
-        })
-        this.createCube({
-            position: {
-                x: 0,
-            }
-        })
-        this.createCube({
-            position: {
-                x: 2,
-            }
-        })
+        // this.createCube({ position: { x: -2 } })
+        // this.createSphere({ position: { x: 0 } })
+        this.createTorus({ position: { x: 1 } })
 
         // Camera
         this.createCamera()
@@ -70,16 +58,24 @@ export default {
     },
     methods: {
         createCube(data) {
-            const cubeGeometry = new THREE.BoxGeometry(1, 1, 1)
-            const cubeMaterial = new THREE.MeshBasicMaterial({color: '#ff0000'})
-            const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial)
-
-            // Set data
-            data.position.x != undefined ? cubeMesh.position.x = data.position.x : null
-            data.position.y != undefined ? cubeMesh.position.y = data.position.y : null
-            data.position.z != undefined ? cubeMesh.position.z = data.position.z : null
-
-            this.scene.add(cubeMesh)
+            const mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1),new THREE.MeshBasicMaterial({color: '#ff0000'}))
+            this.setMeshPosition(mesh, data.position)
+            this.scene.add(mesh)
+        },
+        createSphere(data) {
+            const mesh = new THREE.Mesh(new THREE.SphereGeometry(1, 5, 5),new THREE.MeshBasicMaterial({color: '#ff0000'}))
+            this.setMeshPosition(mesh, data.position)
+            this.scene.add(mesh)
+        },
+        createTorus(data) {
+            const mesh = new THREE.Mesh(new THREE.TorusGeometry( 1, .3, 8, 25 ),new THREE.MeshBasicMaterial({color: '#ff0000'}))
+            this.setMeshPosition(mesh, data.position)
+            this.scene.add(mesh)
+        },
+        setMeshPosition(mesh, position) {
+            position.x != undefined ? mesh.position.x = position.x : null
+            position.y != undefined ? mesh.position.y = position.y : null
+            position.z != undefined ? mesh.position.z = position.z : null
         },
         createCamera() {
             this.camera = new THREE.PerspectiveCamera(75 , this.ratio.width / this.ratio.height, 0.1 , 100)
