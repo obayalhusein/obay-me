@@ -35,6 +35,9 @@ $points: (
     &.rr {
         flex-direction: row-reverse;
     }
+    &.no-wrap {
+        flex-wrap: nowrap;
+    }
 }
 
 .c {

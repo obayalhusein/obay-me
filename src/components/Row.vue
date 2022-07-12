@@ -20,6 +20,10 @@ export default {
             type: String,
             default: null
         },
+        noWrap: {
+            type: Boolean,
+            default: false
+        },
     },
     data () {
         return {
@@ -28,9 +32,10 @@ export default {
     },
     mounted() {
         this.classList += `r ${this.size}`;
-        (this.y) ? this.classList += ` y${this.y}`  : '';
-        (this.x) ? this.classList += ` x${this.x}`  : '';
-        (this.$el.attributes.getNamedItem('reverse')) ?  this.classList += ` rr`  : '';
+        this.y ? this.classList += ` y${this.y}`  : '';
+        this.x ? this.classList += ` x${this.x}`  : '';
+        this.noWrap ? this.classList += ' no-wrap' : '';
+        this.$el.attributes.getNamedItem('reverse') ?  this.classList += ` rr`  : '';
     },
 }
 </script>

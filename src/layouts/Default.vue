@@ -1,11 +1,16 @@
 <template>
   <div>
-    <main>
-      <Header />
-      <slot/>
-    </main>
-    <Footer />
-    <Debugger />
+    <Row size="full" no-wrap>
+      <Col class="pos-sticky top-0 vh-100" style="width: 50px;">
+        <Header />
+      </Col>
+      <Col>
+        <div>
+          <slot/>
+          <Footer />
+        </div>
+      </Col>
+    </Row>
   </div>
 </template>
 
