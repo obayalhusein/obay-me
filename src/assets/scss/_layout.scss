@@ -26,10 +26,12 @@
         stroke: white;
         stroke-linecap: round;
         stroke-miterlimit: 10;
+        transform-origin: center;
         transition: .6s;
     }
     .fill {
         fill: white;
+        transform-origin: center;
         transition: .6s;
     }
 }
