@@ -1,13 +1,35 @@
 .flat {
     #rail {
         background-color: color(light-primary);
-        svg {
-            path {
-                stroke: white;
-            }
-        }
         .nav-link {
             color: white;
+            .nav-icon {
+                .stroke {
+                    stroke-width: 6px;
+                }
+            }
+            &:hover {
+                .nav-icon {
+                    .stroke {
+                        fill: white;
+                        stroke: color(light-primary);
+                    }
+                    .fill {
+                        fill: color(light-primary);
+                    }
+                }
+            }
         }
+    }
+    .stroke {
+        fill: none;
+        stroke: white;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        transition: .6s;
+    }
+    .fill {
+        fill: white;
+        transition: .6s;
     }
 }
