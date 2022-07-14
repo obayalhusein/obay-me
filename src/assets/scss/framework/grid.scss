@@ -43,7 +43,7 @@ $points: (
 .c {
     flex: 1;
     @include max-width('md') {
-        flex: 0 0 100%;
+        flex: 0 1 100%;
     }
     @each $device-name, $device-value in $devices {
         @each $point-name, $point-value in $points {
