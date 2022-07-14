@@ -4,12 +4,24 @@
         .nav-link {
             color: white;
             .nav-icon {
+                transform: translateY(10px);
+                transition: .3s;
+                .nav-icon-container {
+                    transform: scale(.8) translate(10%, 10%);
+                }
                 .stroke {
                     stroke-width: 6px;
                 }
             }
+            small {
+                display: block;
+                transform: translateY(-10px);
+                opacity: 0;
+                transition: .3s;
+            }
             &:hover {
                 .nav-icon {
+                    transform: translateY(0px);
                     .stroke {
                         fill: white;
                         stroke: color(light-primary);
@@ -17,6 +29,10 @@
                     .fill {
                         fill: color(light-primary);
                     }
+                }
+                small {
+                    transform: translateY(0px);
+                    opacity: 1;
                 }
             }
         }
