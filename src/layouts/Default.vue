@@ -1,17 +1,11 @@
 <template>
   <div>
-    <Row size="full" no-wrap>
-      <Col class="pos-sticky top-0 vh-100">
-        <Rail />
-      </Col>
-      <Col>
-        <div>
-          <slot/>
-          <Footer />
-          <Debugger />
-        </div>
-      </Col>
-    </Row>
+    <Rail />
+    <main>
+      <slot/>
+      <Footer />
+      <Debugger />
+    </main>
   </div>
 </template>
 
