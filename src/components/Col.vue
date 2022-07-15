@@ -36,7 +36,7 @@ export default {
     },
     mounted() {
         this.classList += "c";
-        (this.xs) ? this.classList += ` sm${this.xs}`  : '';
+        (this.xs) ? this.classList += ` xs${this.xs}`  : '';
         (this.sm) ? this.classList += ` sm${this.sm}`  : '';
         (this.md) ? this.classList += ` md${this.md}`  : '';
         (this.lg) ? this.classList += ` lg${this.lg}`  : '';

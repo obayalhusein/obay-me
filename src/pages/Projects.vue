@@ -1,11 +1,13 @@
 <template>
   <Layout>
-    <section style="background-color: #e6e8ea">
-      <Row>
-        <Col md="8">img</Col>
-        <Col>
-          <h1>Title</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+    <section>
+      <h1>My Work</h1>
+      <Row size="full">
+        <Col v-for="(project,index) in projects" :key="index" sm="6" md="6" lg="3" xl="2">
+          <div class="relative">
+            <div>{{ project.name }}</div>
+            <g-image :src="project.images.thumbnail" class="w-100" />
+          </div>
         </Col>
       </Row>
     </section>
@@ -13,9 +15,12 @@
 </template>
 
 <script>
+import projectsMixin from '@/mixin/projects'
+
 export default {
   metaInfo: {
     title: 'Projects'
-  }
+  },
+  mixins: [ projectsMixin ],
 }
 </script>

@@ -22,7 +22,8 @@ body {
     transition: .3s;
 }
 
-#app {
+#app,
+main {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -30,6 +31,10 @@ body {
 
 main {
     margin-left: 68px;
+}
+
+#root-content {
+    flex: auto;
 }
 
 /*Basic setup*/

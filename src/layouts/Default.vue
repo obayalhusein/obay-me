@@ -2,7 +2,9 @@
   <div>
     <Rail />
     <main>
-      <slot/>
+      <div id="root-content">
+        <slot/>
+      </div>
       <Footer />
       <Debugger />
     </main>

@@ -19,7 +19,8 @@
                 opacity: 0;
                 transition: .3s;
             }
-            &:hover {
+            &:hover,
+            &.active--exact {
                 .nav-icon {
                     transform: translateY(0px);
                     .stroke {

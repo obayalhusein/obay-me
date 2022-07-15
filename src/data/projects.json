@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "name": "project name 1",
+            "images": {
+                "thumbnail": "https://picsum.photos/id/1/200"
+            }
+        },
+        {
+            "id": "2",
+            "name": "project name 2",
+            "images": {
+                "thumbnail": "https://picsum.photos/id/2/200"
+            }
+        },
+        {
+            "id": "3",
+            "name": "project name 3",
+            "images": {
+                "thumbnail": "https://picsum.photos/id/3/200"
+            }
+        }
+    ]
+}
