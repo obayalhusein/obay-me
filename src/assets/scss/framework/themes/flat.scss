@@ -29,6 +29,9 @@ $shadow: (
 
 // Default style
 .flat {
+    a {
+        color: color(light-primary);
+    }
     @include buttons {
         border-radius: 10px;
         box-shadow: box(sm);
