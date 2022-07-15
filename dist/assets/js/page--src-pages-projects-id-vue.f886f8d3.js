@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{gxPN:function(t,e,n){"use strict";n.r(e);var s={name:"Project"},r=n("KHd+"),a=Object(r.a)(s,(function(){var t=this.$createElement,e=this._self._c||t;return e("Layout",[e("h1",[this._v("My project "+this._s(this.$route.params.id))])])}),[],!1,null,null,null);e.default=a.exports}}]);
