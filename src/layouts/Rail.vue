@@ -1,5 +1,5 @@
 <template>
-    <header id="rail" class="position-fixed top-0 vh-100 smooth">
+    <header id="rail" class="fixed top-0 vh-100 smooth">
       <nav class="pt5">
         <div class="p2">
           <g-link to="/">
