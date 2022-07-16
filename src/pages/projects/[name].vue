@@ -1,8 +1,5 @@
 <template>
     <Layout>
-        <div class="relative of-hidden" style="padding-bottom: 25%;">
-            <img :src="thumbnailUrl(project.name)" :alt="project.name" class="absolute top-0 start-0 w-100 object-cover" />
-        </div>
         <PageTitle :text="project.name" />
     </Layout>
 </template>

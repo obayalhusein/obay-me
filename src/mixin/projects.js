@@ -16,7 +16,7 @@ export default {
     },
     methods: {
         thumbnailUrl(name) {
-            return `/projects/${name}/thumbnail.png`
+            return `/projects/${name}/thumbnail.jpg`
         }
     },
 }
