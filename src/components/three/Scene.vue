@@ -27,9 +27,7 @@ export default {
         }
 
         // Object
-        // this.createCube({ position: { x: -2 } })
-        // this.createSphere({ position: { x: 0 } })
-        this.createTorus({ position: { x: 1 } })
+        this.createTorus({ position: { x: 2 } })
 
         // Camera
         this.createCamera()

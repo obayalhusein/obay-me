@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: 'PageHeader',
+    name: 'PageTitle',
     props:{
         text: {
             type: String,
