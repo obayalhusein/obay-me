@@ -26,3 +26,8 @@
         opacity: 1;
     }
 }
+
+// Rail Icons animation
+@keyframes icon-element-jump {
+    50% { transform: translateY(-10px) }
+}

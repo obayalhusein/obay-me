@@ -44,8 +44,4 @@ export default {
         }
     }
 }
-
-@keyframes icon-element-jump {
-    50% { transform: translateY(-10px) }
-}
 </style>
