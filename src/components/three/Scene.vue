@@ -58,17 +58,23 @@ export default {
     },
     methods: {
         createCube(data) {
-            const mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1),new THREE.MeshBasicMaterial({color: '#ff0000'}))
+            const color = this.currentTheme.colors.primary
+            const mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1),new THREE.MeshBasicMaterial({color: color}))
+            mesh.material.wireframe = this.currentTheme.id == 1
             this.setMeshPosition(mesh, data.position)
             this.scene.add(mesh)
         },
         createSphere(data) {
-            const mesh = new THREE.Mesh(new THREE.SphereGeometry(1, 5, 5),new THREE.MeshBasicMaterial({color: '#ff0000'}))
+            const color = this.currentTheme.colors.primary
+            const mesh = new THREE.Mesh(new THREE.SphereGeometry(1, 5, 5),new THREE.MeshBasicMaterial({color: color}))
+            mesh.material.wireframe = this.currentTheme.id == 1
             this.setMeshPosition(mesh, data.position)
             this.scene.add(mesh)
         },
         createTorus(data) {
-            const mesh = new THREE.Mesh(new THREE.TorusGeometry( 1, .3, 8, 25 ),new THREE.MeshBasicMaterial({color: '#ff0000'}))
+            const color = this.currentTheme.colors.primary
+            const mesh = new THREE.Mesh(new THREE.TorusGeometry( 1, .3, 8, 25 ),new THREE.MeshBasicMaterial({color: color}))
+            mesh.material.wireframe = this.currentTheme.id == 1
             this.setMeshPosition(mesh, data.position)
             this.scene.add(mesh)
         },
