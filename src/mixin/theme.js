@@ -13,6 +13,9 @@ export default {
             if(this.currentTheme){
                 document.body.classList.remove(this.currentTheme.name);
             }
+            else {
+                document.body.classList.add('flat');
+            }
             // Set new Theme
             this.$store.commit('themes/changeCurrentTheme', this.allThemes.find(theme => theme.id == id))
             document.body.classList.add(this.currentTheme.name);
