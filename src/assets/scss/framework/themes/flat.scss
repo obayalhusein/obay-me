@@ -55,8 +55,14 @@ $shadow: (
             color: color(#{$mode}-primary);
         }
         @include buttons {
-            background: color(#{$mode}-primary);
-            color: white;
+            &:not(.secondary) {
+                background-color: color(#{$mode}-primary);
+                color: white;
+            }
+            &.secondary {
+                background-color: transparent;
+                color: color(light-primary);
+            }
         }
         @include inputs {
             background-color: color(#{$mode}-input);

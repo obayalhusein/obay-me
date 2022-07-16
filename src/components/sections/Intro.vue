@@ -1,9 +1,9 @@
 <template>
     <section class="relative">
-        <div class="absolute top-0 start-0 w-100 h-100">
+        <div class="absolute top-0 start-0 w-100 h-100 layer-1">
             <Scene />
         </div>
-        <Row y="c" class="vh-100">
+        <Row y="c" class="relative vh-100 layer-2">
             <Col md="10">
                 <h1 class="mb3">
                     Hi,
@@ -16,7 +16,7 @@
                 <div>
                     <Button text="See Work" />
                     &nbsp;
-                    <Button text="Show Resume" />
+                    <Button text="Show Resume" secondary />
                 </div>
             </Col>
         </Row>
