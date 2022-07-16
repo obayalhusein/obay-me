@@ -1,29 +1,50 @@
+#rail {
+    width: 70px;
+    .nav-link {
+        .nav-icon {
+            transform: translateY(10px);
+            transition: .3s;
+            .nav-icon-container {
+                transform: scale(.8) translate(10%, 10%);
+            }
+        }
+        small {
+            display: block;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: .3s;
+        }
+        &:hover,
+        &.active--exact {
+            .nav-icon {
+                transform: translateY(0px);
+            }
+            small {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+    }
+    .stroke {
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        transform-origin: center;
+        transition: .6s;
+    }
+    .fill {
+        transform-origin: center;
+        transition: .6s;
+    }
+}
+
 .flat {
     #rail {
         background-color: color(light-primary);
-        width: 70px;
         .nav-link {
             color: white;
-            .nav-icon {
-                transform: translateY(10px);
-                transition: .3s;
-                .nav-icon-container {
-                    transform: scale(.8) translate(10%, 10%);
-                }
-                .stroke {
-                    stroke-width: 6px;
-                }
-            }
-            small {
-                display: block;
-                transform: translateY(-10px);
-                opacity: 0;
-                transition: .3s;
-            }
             &:hover,
             &.active--exact {
                 .nav-icon {
-                    transform: translateY(0px);
                     .stroke {
                         fill: white;
                         stroke: color(light-primary);
@@ -32,24 +53,46 @@
                         fill: color(light-primary);
                     }
                 }
-                small {
-                    transform: translateY(0px);
-                    opacity: 1;
+            }
+        }
+    }
+    .stroke {
+        stroke-width: 6px;
+        fill: none;
+        stroke: white;
+    }
+    .fill {
+        fill: white;
+        transform-origin: center;
+    }
+}
+
+.neum {
+    #rail {
+        background-color: #dbdbdb;
+        box-shadow: inset -1px -2px 8px #bebebe;
+        .nav-link {
+            color: #3b3b3b;
+            &.active--exact {
+                .nav-icon {
+                    .stroke {
+                        fill: #3b3b3b;
+                        stroke: #dbdbdb;
+                    }
+                    .fill {
+                        fill: #dbdbdb;
+                    }
                 }
             }
         }
     }
     .stroke {
+        stroke-width: 4px;
         fill: none;
-        stroke: white;
-        stroke-linecap: round;
-        stroke-miterlimit: 10;
-        transform-origin: center;
-        transition: .6s;
+        stroke: #3b3b3b;
     }
     .fill {
-        fill: white;
+        fill: #3b3b3b;
         transform-origin: center;
-        transition: .6s;
     }
 }
