@@ -1,6 +1,7 @@
 <template>
     <Layout>
         <PageTitle :text="project.name" />
+        <g-image :src="thumbnailUrl(project.name)" :alt="project.name" class="w-100" />
     </Layout>
 </template>
 

@@ -36,6 +36,15 @@
         transition: .6s;
     }
 }
+footer {
+    .media-link {
+        width: 25px;
+        height: 25px;
+        &:hover {
+            opacity: .75
+        }
+    }
+}
 
 .flat {
     #rail {
@@ -64,6 +73,13 @@
     .fill {
         fill: white;
         transform-origin: center;
+    }
+    footer {
+        .media-link {
+            path {
+                fill: color(light-primary);
+            }
+        }
     }
 }
 
@@ -94,5 +110,12 @@
     .fill {
         fill: #3b3b3b;
         transform-origin: center;
+    }
+    footer {
+        .media-link {
+            path {
+                fill: #3b3b3b;
+            }
+        }
     }
 }

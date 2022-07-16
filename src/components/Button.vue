@@ -1,5 +1,5 @@
 <template>
-    <component :is="link ? 'a' : 'button'" class="btn" :href="link" :class="setSpacerClass">{{ text }}</component>
+    <component :is="link ? 'g-link' : 'button'" class="btn" :to="link" :class="setSpacerClass">{{ text }}</component>
 </template>
 
 <script>
