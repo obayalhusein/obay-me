@@ -41,7 +41,7 @@
                                 inset 4px 4px 8px #bebebe,
                                 inset -4px -4px 8px #ffffff;
                     .radio-icon-inside {
-                        opacity: 1;
+                        opacity: .85;
                     }
                 }
             }
@@ -55,8 +55,8 @@
             .radio-icon-inside {
                 background-color: #3b3b3b;
                 opacity: .25;
-                width: 1rem;
-                height: 1rem;
+                width: .75rem;
+                height: .75rem;
             }
         }
     }

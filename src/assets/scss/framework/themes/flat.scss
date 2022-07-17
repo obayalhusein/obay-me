@@ -54,6 +54,10 @@ $shadow: (
         }
         .radio-icon {
             box-shadow: box(sm);
+            .radio-icon-inside {
+                width: .75rem;
+                height: .75rem;
+            }
         }
     }
 }
