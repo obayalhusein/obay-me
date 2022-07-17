@@ -1,8 +1,13 @@
 <template>
     <div :class="{'open': showThemeSelector}" class="theme-selector relative mb5">
         <div @click="showThemeSelector = !showThemeSelector" class="nav-link d-block tc bold p2" style="cursor: pointer">
-        <IconMagic />
-        <small>I'm a Magician</small>
+            <div :class="!showThemeSelector ? 'visible': 'hidden'" class="smooth">
+                <IconMagic />
+                <small>I'm a Magician</small>
+            </div>
+            <div :class="showThemeSelector ? 'visible': 'hidden'" class="absolute top-0 start-0 w-100 py4 smooth" style="font-size: 2rem">
+                &times;
+            </div>
         </div>
         <ThemeSelectorTooltip />
     </div>
