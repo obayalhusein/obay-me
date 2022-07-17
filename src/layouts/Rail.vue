@@ -29,10 +29,10 @@
 
 <script>
 import Ologo from '@/components/vector/brand/Ologo'
-import IconHome from '@/components/vector/icons/IconHome'
-import IconAbout from '@/components/vector/icons/IconAbout'
-import IconProjects from '@/components/vector/icons/IconProjects'
-import IconCase from '@/components/vector/icons/IconCase'
+import IconHome from '@/components/vector/icons/rail/IconHome'
+import IconAbout from '@/components/vector/icons/rail/IconAbout'
+import IconProjects from '@/components/vector/icons/rail/IconProjects'
+import IconCase from '@/components/vector/icons/rail/IconCase'
 import ThemeSelector from '@/components/common/ThemeSelector'
 
 export default {
