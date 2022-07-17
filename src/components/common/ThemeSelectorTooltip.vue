@@ -1,5 +1,5 @@
 <template>
-    <div class="theme-tooltip absolute bottom-0 end-0 ts ps1">
+    <div class="theme-tooltip absolute bottom-0 end-0 ts ps1 smooth">
         <div class="theme-tooltip-body p3">
             <div class="mb3">
                 <Button secondary @click.native="setTheme(1)" text="Flat" class="w-100"/>
@@ -18,7 +18,7 @@
 import Theme from '~/mixin/theme'
 
 export default {
-    name: 'ThemeTooltip',
+    name: 'ThemeSelectorTooltip',
     mixins: [Theme],
 }
 </script>

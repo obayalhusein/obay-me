@@ -1,5 +1,8 @@
 #rail {
     width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .nav-link {
         .nav-icon {
             transform: translateY(10px);
@@ -36,7 +39,6 @@
         transition: .6s;
     }
     .theme-tooltip {
-        transform: translate(100%, -1rem);
         display: flex;
         align-items: end;
         &-body {

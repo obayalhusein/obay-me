@@ -22,14 +22,8 @@
           <IconCase />
           <small>Hire Me</small>
         </g-link>
-        <div class="relative">
-          <div class="nav-link d-block tc bold p2" style="cursor: pointer">
-            <IconMagic />
-            <small>I'm a Magician</small>
-          </div>
-          <ThemeTooltip />
-        </div>
       </nav>
+      <ThemeSelector />
     </header>
 </template>
 
@@ -39,11 +33,10 @@ import IconHome from '@/components/vector/icons/IconHome'
 import IconAbout from '@/components/vector/icons/IconAbout'
 import IconProjects from '@/components/vector/icons/IconProjects'
 import IconCase from '@/components/vector/icons/IconCase'
-import IconMagic from '@/components/vector/icons/rail/IconMagic'
-import ThemeTooltip from '@/components/ThemeTooltip'
+import ThemeSelector from '@/components/common/ThemeSelector'
 
 export default {
     name: 'Rail',
-    components: { Ologo, IconHome, IconAbout, IconProjects, IconCase, IconMagic, ThemeTooltip },
+    components: { Ologo, IconHome, IconAbout, IconProjects, IconCase, ThemeSelector },
 }
 </script>
