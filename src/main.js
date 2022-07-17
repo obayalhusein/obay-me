@@ -9,11 +9,11 @@ import Vuex from 'vuex'
 import store from '~/store'
 
 // Global Components
-import Button from '~/components/Button.vue'
-import Input from '~/components/Input.vue'
-import Img from '~/components/Img.vue'
-import Row from '~/components/Row.vue'
-import Col from '~/components/Col.vue'
+import Button from '~/components/ui/Button.vue'
+import Input from '~/components/ui/Input.vue'
+import Img from '~/components/ui/Img.vue'
+import Row from '~/components/ui/Row.vue'
+import Col from '~/components/ui/Col.vue'
 
 export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(Vuex)
