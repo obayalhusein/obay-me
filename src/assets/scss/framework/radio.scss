@@ -1,0 +1,22 @@
+@include radio {
+    label {
+        display: flex;
+        align-items: center;
+        .radio-input {
+            display: none;
+        }
+        .radio-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            .radio-icon-inside {
+                width: .75rem;
+                height: .75rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}

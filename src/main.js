@@ -11,6 +11,7 @@ import store from '@/store'
 // Global Components
 import Button from '@/components/ui/Button.vue'
 import Input from '@/components/ui/Input.vue'
+import Radio from '@/components/ui/Radio.vue'
 import Img from '@/components/ui/Img.vue'
 import Row from '@/components/ui/Row.vue'
 import Col from '@/components/ui/Col.vue'
@@ -25,6 +26,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // Components globally
   Vue.component('Button', Button)
   Vue.component('Input', Input)
+  Vue.component('Radio', Radio)
   Vue.component('Img', Img)
   Vue.component('Row', Row)
   Vue.component('Col', Col)

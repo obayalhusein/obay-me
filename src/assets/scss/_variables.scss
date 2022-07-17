@@ -40,3 +40,4 @@ $gaps: (
 @mixin titles { h1,h2,h3,h4,h5,h6 {@content;}}
 @mixin buttons { .btn {@content;}}
 @mixin inputs { input, textarea {@content;}}
+@mixin radio { .radio {@content;}}

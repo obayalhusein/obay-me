@@ -32,4 +32,32 @@
             color: rgba(0,0,0,.2);
         }
     }
+    @include radio {
+        .radio-input {
+            &:checked {
+                + .radio-icon {
+                    box-shadow: 0 0 0 #bebebe,
+                                0 0 0 #ffffff,
+                                inset 4px 4px 8px #bebebe,
+                                inset -4px -4px 8px #ffffff;
+                    .radio-icon-inside {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .radio-icon {
+            background-color: transparent;
+            box-shadow:  4px 4px 8px #bebebe,
+                         -4px -4px 8px #ffffff,
+                         inset 0 0 0 #bebebe,
+                         inset 0 0 0 #ffffff;
+            .radio-icon-inside {
+                background-color: #3b3b3b;
+                opacity: .25;
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
 }

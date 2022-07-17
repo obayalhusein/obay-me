@@ -44,6 +44,18 @@ $shadow: (
         border-radius: 10px;
         box-shadow: box(sm);
     }
+    @include radio {
+        .radio-input {
+            &:checked {
+                + .radio-icon {
+                    background-color: color(light-primary);
+                }
+            }
+        }
+        .radio-icon {
+            box-shadow: box(sm);
+        }
+    }
 }
 
 // Dark & Light
@@ -69,6 +81,23 @@ $shadow: (
             color: color(#{$mode}-text);
             &::placeholder {
                 color: color(#{$mode}-text-muted);
+            }
+        }
+        @include radio {
+            .radio-input {
+                &:checked {
+                    + .radio-icon {
+                        .radio-icon-inside {
+                            background-color: color(#{$mode}-base);
+                        }
+                    }
+                }
+            }
+            .radio-icon {
+                background-color: color(#{$mode}-base);
+                .radio-icon-inside {
+                    background-color: color(#{$mode}-base);
+                }
             }
         }
     }
