@@ -22,7 +22,7 @@ export default {
     components: { IconMagic, ThemeSelectorTooltip },
     data () {
         return {
-            showThemeSelector: true,
+            showThemeSelector: false,
         }
     },
 }
