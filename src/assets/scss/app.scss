@@ -1,23 +1,25 @@
 @import './variables';
 
-// Framework
-@import './framework/grid.scss';
-@import './framework/image.scss';
-@import './framework/button.scss';
-@import './framework/input.scss';
-@import './framework/radio.scss';
-@import './framework/text.scss';
-@import './framework/spacer.scss';
-@import './framework/overflow.scss';
-@import './framework/positions.scss';
-@import './framework/ratios.scss';
-@import './framework/svg.scss';
-@import './framework/animation.scss';
+// Components
+@import './components/button.scss';
+@import './components/input.scss';
+@import './components/radio.scss';
+
+// Utilities
+@import './utilities/grid.scss';
+@import './utilities/image.scss';
+@import './utilities/text.scss';
+@import './utilities/spacer.scss';
+@import './utilities/overflow.scss';
+@import './utilities/positions.scss';
+@import './utilities/ratios.scss';
+@import './utilities/svg.scss';
 
 // Themes
-@import './framework/themes/flat.scss';
-@import './framework/themes/neum.scss';
+@import './themes/flat.scss';
+@import './themes/neum.scss';
 
 // General
 @import './global';
 @import './layout';
+@import './animation.scss';
