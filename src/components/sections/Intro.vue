@@ -14,9 +14,9 @@
                 </h1>
                 <p class="mb3" style="max-width: 600px">Creative UI/UX Designer for websites and Mobile Apps, skilled Front-End Developer, focusing on the quality in the first place.</p>
                 <div>
-                    <Button text="See Work" />
+                    <Button link="/projects" text="See Work" />
                     &nbsp;
-                    <Button text="Show Resume" secondary />
+                    <Button link="/pdf/Obay Alhusein - Front-End Developer resume.pdf" target="_blank" text="Show Resume" secondary />
                 </div>
             </Col>
         </Row>
