@@ -6,7 +6,6 @@
         <slot/>
       </div>
       <Footer />
-      <Debugger />
     </main>
   </div>
 </template>
@@ -15,14 +14,9 @@
 import Theme from '~/mixin/theme'
 import Footer from '~/layouts/Footer'
 import Rail from '~/layouts/Rail'
-import Debugger from '~/components/Debugger'
 
 export default {
-  components: {
-    Footer,
-    Rail,
-    Debugger,
-  },
+  components: { Footer, Rail },
   mixins: [Theme],
   mounted() {
     // Set default theme

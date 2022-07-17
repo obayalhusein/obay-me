@@ -35,6 +35,14 @@
         transform-origin: center;
         transition: .6s;
     }
+    .theme-tooltip {
+        transform: translate(100%, -1rem);
+        display: flex;
+        align-items: end;
+        &-body {
+            border-radius: 1rem;
+        }
+    }
 }
 footer {
     .media-link {
@@ -74,6 +82,12 @@ footer {
         fill: white;
         transform-origin: center;
     }
+    .theme-tooltip {
+        &-body {
+            background: white;
+            box-shadow: box(lg);
+        }
+    }
     footer {
         .media-link {
             path {
@@ -110,6 +124,11 @@ footer {
     .fill {
         fill: #3b3b3b;
         transform-origin: center;
+    }
+    .theme-tooltip {
+        &-body {
+            background-color: #dbdbdb;
+        }
     }
     footer {
         .media-link {
