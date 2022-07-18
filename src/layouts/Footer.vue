@@ -12,7 +12,7 @@
             </a>
         </Row>
         <div class="mb3">
-            <Button link="/hire" text="Hire me!" />
+            <Button link="/hire" text="Hire me!" secondary />
         </div>
         <div>
             Copyright &copy; {{ new Date().getFullYear() }}

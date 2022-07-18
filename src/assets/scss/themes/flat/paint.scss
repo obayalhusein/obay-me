@@ -1,0 +1,44 @@
+// Dark & Light Color
+@each $mode, $mode-value in $modes {
+    .flat#{$mode-value} {
+        background-color: color(#{$mode}-base);
+        color: color(#{$mode}-text);
+        @include titles {
+            color: color(#{$mode}-primary);
+        }
+        @include buttons {
+            &:not(.secondary) {
+                background-color: color(#{$mode}-primary);
+                color: white;
+            }
+            &.secondary {
+                background-color: transparent;
+                color: color(light-primary);
+            }
+        }
+        @include inputs {
+            background-color: color(#{$mode}-input);
+            color: color(#{$mode}-text);
+            &::placeholder {
+                color: color(#{$mode}-text-muted);
+            }
+        }
+        @include radio {
+            .radio-input {
+                &:checked {
+                    + .radio-icon {
+                        .radio-icon-inside {
+                            background-color: color(#{$mode}-base);
+                        }
+                    }
+                }
+            }
+            .radio-icon {
+                background-color: color(#{$mode}-base);
+                .radio-icon-inside {
+                    background-color: color(#{$mode}-base);
+                }
+            }
+        }
+    }
+}

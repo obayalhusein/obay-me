@@ -1,12 +1,14 @@
 .neum {
     background-color: #e0e0e0;
+
     @include titles {
         color: #3b3b3b;
         // text-shadow:  1px 1px 2px #ffffff,
         //              -1px -1px 2px #bebebe;
     }
+
     @include buttons {
-        background: #e0e0e0;
+        background-color: #e0e0e0;
         color: #161616;
         border-radius: 40px;
         box-shadow:  4px 4px 8px #bebebe,
@@ -20,8 +22,9 @@
                         inset -4px -4px 8px #ffffff;
         }
     }
+
     @include inputs {
-        background: #dbdbdb;
+        background-color: #dbdbdb;
         color: #161616;
         border-radius: 40px;
         box-shadow: 0 0 0 #bebebe,
@@ -32,6 +35,7 @@
             color: rgba(0,0,0,.2);
         }
     }
+
     @include radio {
         .radio-input {
             &:checked {
@@ -57,6 +61,47 @@
                 opacity: .25;
                 width: .75rem;
                 height: .75rem;
+            }
+        }
+    }
+    
+    #rail {
+        background-color: #dbdbdb;
+        box-shadow: inset -1px -2px 8px #bebebe;
+        .nav-link {
+            color: #3b3b3b;
+            &.active--exact {
+                .nav-icon {
+                    .stroke {
+                        fill: #3b3b3b;
+                        stroke: #dbdbdb;
+                    }
+                    .fill {
+                        fill: #dbdbdb;
+                    }
+                }
+            }
+        }
+        .stroke {
+            stroke-width: 4px;
+            fill: none;
+            stroke: #3b3b3b;
+        }
+        .fill {
+            fill: #3b3b3b;
+            transform-origin: center;
+        }
+        .theme-tooltip {
+            &-body {
+                background-color: #dbdbdb;
+            }
+        }
+    }
+    
+    footer {
+        .media-link {
+            path {
+                fill: #3b3b3b;
             }
         }
     }

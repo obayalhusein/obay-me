@@ -1,0 +1,79 @@
+// Default common style without colors
+.flat {
+    a {
+        color: color(light-primary);
+    }
+
+    @include buttons {
+        border-radius: 10px;
+        box-shadow: box(sm);
+        &:hover {
+            box-shadow: box(lg);
+            transform: scale(1.025);
+        }
+    }
+
+    @include inputs {
+        border-radius: 10px;
+        box-shadow: box(sm);
+    }
+
+    @include radio {
+        .radio-input {
+            &:checked {
+                + .radio-icon {
+                    background-color: color(light-primary);
+                }
+            }
+        }
+        .radio-icon {
+            box-shadow: box(sm);
+            .radio-icon-inside {
+                width: .75rem;
+                height: .75rem;
+            }
+        }
+    }
+    
+    #rail {
+        background-color: color(light-primary);
+        .nav-link {
+            color: white;
+            &:hover,
+            &.active--exact {
+                .nav-icon {
+                    .stroke {
+                        fill: white;
+                        stroke: color(light-primary);
+                    }
+                    .fill {
+                        fill: color(light-primary);
+                    }
+                }
+            }
+        }
+        .stroke {
+            stroke-width: 6px;
+            fill: none;
+            stroke: white;
+        }
+        .fill {
+            fill: white;
+            transform-origin: center;
+        }
+        .theme-tooltip {
+            &-body {
+                background: white;
+                box-shadow: box(lg);
+            }
+        }
+    }
+    
+    footer {
+        .media-link {
+            path {
+                fill: color(light-primary);
+            }
+        }
+    }
+}
