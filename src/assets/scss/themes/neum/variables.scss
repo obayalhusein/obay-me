@@ -1,9 +1,17 @@
 $color: (
     light-base: #e0e0e0,
     light-title: #3b3b3b,
+    light-text: gray,
     light-base-rail: #dbdbdb,
     light-dim: #bebebe,
     light-glare: white,
+    
+    dark-base: #252929,
+    dark-title: #d3d3d3,
+    dark-text: gray,
+    dark-base-rail: #222626,
+    dark-dim: #1e2020,
+    dark-glare: #2c3030,
 );
 
 $shadow: (
@@ -11,6 +19,11 @@ $shadow: (
     light-sm-outter: ( 1px 2px 4px color(light-dim), -1px -2px 4px color(light-glare), inset 0 0 0 color(light-dim), inset 0 0 0 color(light-glare) ),
     light-md-inner: ( 0 0 0 color(light-dim), 0 0 0 color(light-glare), inset 2px 4px 8px color(light-dim), inset -2px -4px 8px color(light-glare) ),
     light-md-outter: ( 2px 4px 8px color(light-dim), -2px -4px 8px color(light-glare), inset 0 0 0 color(light-dim), inset 0 0 0 color(light-glare) ),
+    
+    dark-sm-inner: ( 0 0 0 color(dark-dim), 0 0 0 color(dark-glare), inset 1px 2px 4px color(dark-dim), inset -1px -2px 4px color(dark-glare) ),
+    dark-sm-outter: ( 1px 2px 4px color(dark-dim), -1px -2px 4px color(dark-glare), inset 0 0 0 color(dark-dim), inset 0 0 0 color(dark-glare) ),
+    dark-md-inner: ( 0 0 0 color(dark-dim), 0 0 0 color(dark-glare), inset 2px 4px 8px color(dark-dim), inset -2px -4px 8px color(dark-glare) ),
+    dark-md-outter: ( 2px 4px 8px color(dark-dim), -2px -4px 8px color(dark-glare), inset 0 0 0 color(dark-dim), inset 0 0 0 color(dark-glare) ),
 );
 
 @function color($color-name){ @return map_get($color, $color-name); }

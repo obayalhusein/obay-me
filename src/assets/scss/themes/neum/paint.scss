@@ -1,81 +1,86 @@
-.neum {
-    background-color: color(light-base);
+// Dark & Light Color
+@each $mode, $mode-value in $modes {
+    .neum#{$mode-value} {
+        background-color: color(#{$mode}-base);
+        color: color(#{$mode}-text);
 
-    @include titles {
-        color: color(light-title);
-    }
-
-    @include buttons {
-        background-color: color(light-base);
-        color: color(light-title);
-        box-shadow:  box(light-md-outter);
-        &:hover {
-            box-shadow: box(light-md-inner);
+        @include titles {
+            color: color(#{$mode}-title);
         }
-    }
 
-    @include inputs {
-        background-color: color(light-base);
-        color: color(light-title);
-        box-shadow: box(light-sm-inner);
-        &:focus {
-            box-shadow: box(light-sm-outter);
-        }
-        &::placeholder {
-            color: lighten(color(light-title), 30%);
-        }
-    }
-
-    @include radio {
-        .radio-input {
-            &:checked {
-                + .radio-icon {
-                    box-shadow: box(light-md-inner);
-                }
+        @include buttons {
+            background-color: color(#{$mode}-base);
+            color: color(#{$mode}-title);
+            box-shadow:  box(#{$mode}-md-outter);
+            &:hover {
+                box-shadow: box(#{$mode}-md-inner);
             }
         }
-        .radio-icon {
-            box-shadow:  box(light-md-outter);
-            .radio-icon-inside {
-                background-color: color(light-title);
+
+        @include inputs {
+            background-color: color(#{$mode}-base);
+            color: color(#{$mode}-title);
+            box-shadow: box(#{$mode}-sm-inner);
+            &:focus {
+                box-shadow: box(#{$mode}-sm-outter);
+            }
+            &::placeholder {
+                color: #{$mode}en(color(#{$mode}-title), 30%);
             }
         }
-    }
-    
-    #rail {
-        background-color: color(light-base-rail);
-        box-shadow: inset -1px -2px 8px color(light-dim);
-        .nav-link {
-            color: color(light-title);
-            &.active--exact {
-                .nav-icon {
-                    .stroke {
-                        fill: color(light-title);
-                        stroke: color(light-base-rail);
-                    }
-                    .fill {
-                        fill: color(light-base-rail);
+
+        @include radio {
+            .radio-input {
+                &:checked {
+                    + .radio-icon {
+                        box-shadow: box(#{$mode}-md-inner);
                     }
                 }
             }
-        }
-        .stroke {
-            stroke: color(light-title);
-        }
-        .fill {
-            fill: color(light-title);
-        }
-        .theme-tooltip {
-            &-body {
-                background-color: color(light-base);
+            .radio-icon {
+                box-shadow:  box(#{$mode}-md-outter);
+                .radio-icon-inside {
+                    background-color: color(#{$mode}-title);
+                }
             }
         }
-    }
-    
-    footer {
-        .media-link {
-            path {
-                fill: color(light-title);
+        
+        #rail {
+            background-color: color(#{$mode}-base-rail);
+            box-shadow: inset -1px -2px 8px color(#{$mode}-dim);
+            .nav-link {
+                color: color(#{$mode}-title);
+                &.active--exact {
+                    .nav-icon {
+                        .stroke {
+                            fill: color(#{$mode}-title);
+                            stroke: color(#{$mode}-base-rail);
+                        }
+                        .fill {
+                            fill: color(#{$mode}-base-rail);
+                        }
+                    }
+                }
+            }
+            .stroke {
+                stroke: color(#{$mode}-title);
+            }
+            .fill {
+                fill: color(#{$mode}-title);
+            }
+            .theme-tooltip {
+                &-body {
+                    box-shadow: box(#{$mode}-md-inner);
+                    background-color: color(#{$mode}-base);
+                }
+            }
+        }
+        
+        footer {
+            .media-link {
+                path {
+                    fill: color(#{$mode}-title);
+                }
             }
         }
     }
