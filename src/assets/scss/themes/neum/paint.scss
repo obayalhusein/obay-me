@@ -1,0 +1,82 @@
+.neum {
+    background-color: color(light-base);
+
+    @include titles {
+        color: color(light-title);
+    }
+
+    @include buttons {
+        background-color: color(light-base);
+        color: color(light-title);
+        box-shadow:  box(light-md-outter);
+        &:hover {
+            box-shadow: box(light-md-inner);
+        }
+    }
+
+    @include inputs {
+        background-color: color(light-base);
+        color: color(light-title);
+        box-shadow: box(light-sm-inner);
+        &:focus {
+            box-shadow: box(light-sm-outter);
+        }
+        &::placeholder {
+            color: lighten(color(light-title), 30%);
+        }
+    }
+
+    @include radio {
+        .radio-input {
+            &:checked {
+                + .radio-icon {
+                    box-shadow: box(light-md-inner);
+                }
+            }
+        }
+        .radio-icon {
+            box-shadow:  box(light-md-outter);
+            .radio-icon-inside {
+                background-color: color(light-title);
+            }
+        }
+    }
+    
+    #rail {
+        background-color: color(light-base-rail);
+        box-shadow: inset -1px -2px 8px color(light-dim);
+        .nav-link {
+            color: color(light-title);
+            &.active--exact {
+                .nav-icon {
+                    .stroke {
+                        fill: color(light-title);
+                        stroke: color(light-base-rail);
+                    }
+                    .fill {
+                        fill: color(light-base-rail);
+                    }
+                }
+            }
+        }
+        .stroke {
+            stroke: color(light-title);
+        }
+        .fill {
+            fill: color(light-title);
+        }
+        .theme-tooltip {
+            &-body {
+                background-color: color(light-base);
+            }
+        }
+    }
+    
+    footer {
+        .media-link {
+            path {
+                fill: color(light-title);
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+$color: (
+    light-base: #e0e0e0,
+    light-title: #3b3b3b,
+    light-base-rail: #dbdbdb,
+    light-dim: #bebebe,
+    light-glare: white,
+);
+
+$shadow: (
+    light-sm-inner: ( 0 0 0 color(light-dim), 0 0 0 color(light-glare), inset 1px 2px 4px color(light-dim), inset -1px -2px 4px color(light-glare) ),
+    light-sm-outter: ( 1px 2px 4px color(light-dim), -1px -2px 4px color(light-glare), inset 0 0 0 color(light-dim), inset 0 0 0 color(light-glare) ),
+    light-md-inner: ( 0 0 0 color(light-dim), 0 0 0 color(light-glare), inset 2px 4px 8px color(light-dim), inset -2px -4px 8px color(light-glare) ),
+    light-md-outter: ( 2px 4px 8px color(light-dim), -2px -4px 8px color(light-glare), inset 0 0 0 color(light-dim), inset 0 0 0 color(light-glare) ),
+);
+
+@function color($color-name){ @return map_get($color, $color-name); }
+@function box($shadow-name){ @return map_get($shadow, $shadow-name); }

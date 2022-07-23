@@ -1,49 +1,21 @@
 .neum {
-    background-color: #e0e0e0;
-
     @include titles {
-        color: #3b3b3b;
-        // text-shadow:  1px 1px 2px #ffffff,
-        //              -1px -1px 2px #bebebe;
+        // text-shadow:  1px 1px 2px color(light-glare),
+        //              -1px -1px 2px color(light-dim);
     }
 
     @include buttons {
-        background-color: #e0e0e0;
-        color: #161616;
         border-radius: 40px;
-        box-shadow:  4px 4px 8px #bebebe,
-                     -4px -4px 8px #ffffff,
-                     inset 0 0 0 #bebebe,
-                     inset 0 0 0 #ffffff;
-        &:hover {
-            box-shadow: 0 0 0 #bebebe,
-                        0 0 0 #ffffff,
-                        inset 4px 4px 8px #bebebe,
-                        inset -4px -4px 8px #ffffff;
-        }
     }
 
     @include inputs {
-        background-color: #dbdbdb;
-        color: #161616;
         border-radius: 40px;
-        box-shadow: 0 0 0 #bebebe,
-                    0 0 0 #ffffff,
-                    inset 1px 2px 4px #bebebe,
-                    inset -1px -2px 4px #ffffff;
-        &::placeholder {
-            color: rgba(0,0,0,.2);
-        }
     }
 
     @include radio {
         .radio-input {
             &:checked {
                 + .radio-icon {
-                    box-shadow: 0 0 0 #bebebe,
-                                0 0 0 #ffffff,
-                                inset 4px 4px 8px #bebebe,
-                                inset -4px -4px 8px #ffffff;
                     .radio-icon-inside {
                         opacity: .85;
                     }
@@ -52,12 +24,7 @@
         }
         .radio-icon {
             background-color: transparent;
-            box-shadow:  4px 4px 8px #bebebe,
-                         -4px -4px 8px #ffffff,
-                         inset 0 0 0 #bebebe,
-                         inset 0 0 0 #ffffff;
             .radio-icon-inside {
-                background-color: #3b3b3b;
                 opacity: .25;
                 width: .75rem;
                 height: .75rem;
@@ -66,43 +33,12 @@
     }
     
     #rail {
-        background-color: #dbdbdb;
-        box-shadow: inset -1px -2px 8px #bebebe;
-        .nav-link {
-            color: #3b3b3b;
-            &.active--exact {
-                .nav-icon {
-                    .stroke {
-                        fill: #3b3b3b;
-                        stroke: #dbdbdb;
-                    }
-                    .fill {
-                        fill: #dbdbdb;
-                    }
-                }
-            }
-        }
         .stroke {
             stroke-width: 4px;
             fill: none;
-            stroke: #3b3b3b;
         }
         .fill {
-            fill: #3b3b3b;
             transform-origin: center;
-        }
-        .theme-tooltip {
-            &-body {
-                background-color: #dbdbdb;
-            }
-        }
-    }
-    
-    footer {
-        .media-link {
-            path {
-                fill: #3b3b3b;
-            }
         }
     }
 }
